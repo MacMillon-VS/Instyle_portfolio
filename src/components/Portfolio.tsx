@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ExternalLink, Calendar, MapPin, Eye } from 'lucide-react';
 import ProjectDetail from './ProjectDetail';
 import projectsData from '../data/projectsData';

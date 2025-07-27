@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Calculator as CalcIcon, Home, Building2, Paintbrush, Wrench, Cpu, Sparkles } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import {  Home, Building2, Paintbrush, Wrench, Cpu, Sparkles } from 'lucide-react';
 
 const Calculator = () => {
   const [formData, setFormData] = useState({
@@ -75,15 +75,15 @@ const Calculator = () => {
     }));
   };
 
-  const getProjectIcon = (type: string) => {
-    const icons = {
-      residential: Home,
-      commercial: Building2,
-      interior: Paintbrush,
-      exterior: Wrench
-    };
-    return icons[type as keyof typeof icons];
-  };
+  // const getProjectIcon = (type: string) => {
+  //   const icons = {
+  //     residential: Home,
+  //     commercial: Building2,
+  //     interior: Paintbrush,
+  //     exterior: Wrench
+  //   };
+  //   return icons[type as keyof typeof icons];
+  // };
 
   return (
     <section id="calculator" className="py-20 lg:py-32 bg-gray-800">

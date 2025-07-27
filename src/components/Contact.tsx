@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare } from 'lucide-react';
+// import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,10 +14,26 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+    try {
+            // const response = await emailjs.sendForm(process.env.REACT_APP_CALC_SERVICE_ID,process.env.REACT_APP_CALC_TEMPLATE_ID,e.target,process.env.REACT_APP_CALC_PUBLIC_KEY);
+            // console.log('SUCCESS!', response.status, response.text);
+            // setIsSuccess(true);
+          } catch (error) {
+            //   console.log('FAILED...', error);
+              // setIsFailure(true);
+          }
+        
+        setFormData({
+            name: '',
+    email: '',
+    phone: '',
+    service: '',
+    budget: '',
+    message: ''
+          });
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitted(true);

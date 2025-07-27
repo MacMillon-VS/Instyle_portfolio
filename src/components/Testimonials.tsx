@@ -4,48 +4,59 @@ import { Star, Quote, ChevronLeft, ChevronRight, Users } from 'lucide-react';
 const Testimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Sarah Johnson',
-      role: 'CEO, TechCorp',
-      company: 'Fortune 500 Technology Company',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      rating: 5,
-      text: 'Instyle Architect transformed our corporate headquarters into a space that truly reflects our innovative culture. The AI-powered design process was revolutionary, and the sustainable features have reduced our energy costs by 40%.',
-      project: 'Corporate Headquarters Redesign'
-    },
-    {
-      id: 2,
-      name: 'Michael Chen',
-      role: 'Homeowner',
-      company: 'Private Residence',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      rating: 5,
-      text: 'Our smart home is beyond anything we imagined. The adaptive lighting, climate control, and space optimization make daily life effortless. The design seamlessly blends technology with comfort.',
-      project: 'Smart Home Integration'
-    },
-    {
-      id: 3,
-      name: 'Emma Rodriguez',
-      role: 'Creative Director',
-      company: 'Design Studio',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      rating: 5,
-      text: 'The retail space they designed for us has increased foot traffic by 60%. The immersive environment and smart layout create an unforgettable customer experience. Absolutely brilliant work.',
-      project: 'Flagship Store Design'
-    },
-    {
-      id: 4,
-      name: 'David Park',
-      role: 'Property Developer',
-      company: 'Urban Development Group',
-      image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
-      rating: 5,
-      text: 'Working with Instyle Architect on our mixed-use development was exceptional. Their sustainable approach and innovative design solutions created a landmark that sets new standards for urban living.',
-      project: 'Mixed-Use Development'
-    }
-  ];
+const testimonials = [
+  {
+    id: 1,
+    name: 'Karthik Subramanian',
+    role: 'IT Professional',
+    company: 'Chennai',
+    image: 'https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    rating: 5,
+    text: 'We approached them to build our dream home in Tambaram, and they exceeded our expectations. The team was professional, transparent with costs, and always on time. Our 3BHK house came out exactly as we envisioned.',
+    project: 'New House Construction in Tambaram'
+  },
+  {
+    id: 2,
+    name: 'Revathi Rajan',
+    role: 'Boutique Owner',
+    company: 'Coimbatore',
+    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    rating: 5,
+    text: 'I had an old shop in Gandhipuram that needed a full renovation. The team handled everything from design to execution with great care. The new interiors attract more customers and I’ve seen a real boost in business.',
+    project: 'Shop Renovation Gandhipuram, Coimbatore'
+  },
+  {
+    id: 3,
+    name: 'Manoj Kumar',
+    role: 'Bank Manager',
+    company: 'Madurai',
+    image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    rating: 5,
+    text: 'We wanted to add an extra floor to our existing house for my son’s family. The team gave us smart structural solutions and completed the project with minimal disturbance. Very happy with the quality of work.',
+    project: 'Home Extension Project Madurai'
+  },
+  {
+    id: 4,
+    name: 'Priya Balasubramanian',
+    role: 'Teacher',
+    company: 'Trichy',
+    image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    rating: 5,
+    text: 'I got my ancestral home in Srirangam upgraded with modern fittings and interiors while keeping the old charm intact. The team showed great respect for tradition while giving it a fresh, elegant look.',
+    project: 'Heritage Home Upgrade Srirangam, Trichy'
+  },
+  {
+    id: 5,
+    name: 'Senthil Murugan',
+    role: 'Entrepreneur',
+    company: 'Salem',
+    image: 'https://images.pexels.com/photos/1707828/pexels-photo-1707828.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop',
+    rating: 5,
+    text: 'They constructed a small commercial complex for me in Salem. I appreciated their planning, legal guidance, and timely delivery. The building was ready for rent faster than I expected. Highly recommended!',
+    project: 'Commercial Building Construction Salem'
+  }
+];
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -86,7 +97,7 @@ const Testimonials = () => {
             {/* Main Testimonial */}
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-8 lg:p-12 shadow-2xl">
               <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                <div className="flex-shrink-0">
+                {/* <div className="flex-shrink-0">
                   <div className="relative">
                     <img
                       src={testimonials[currentTestimonial].image}
@@ -95,7 +106,7 @@ const Testimonials = () => {
                     />
                     <div className="absolute inset-0 w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-400/20 animate-pulse"></div>
                   </div>
-                </div>
+                </div> */}
                 
                 <div className="flex-1 text-center lg:text-left">
                   <Quote className="w-8 h-8 lg:w-12 lg:h-12 text-cyan-400 mb-4 mx-auto lg:mx-0" />
@@ -162,10 +173,10 @@ const Testimonials = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-16 lg:mt-24">
             {[
-              { number: '500+', label: 'Happy Clients' },
-              { number: '98%', label: 'Satisfaction Rate' },
-              { number: '50+', label: 'Awards Won' },
-              { number: '15+', label: 'Years Experience' }
+              { number: '50+', label: 'Happy Clients' },
+              { number: '99%', label: 'Satisfaction Rate' },
+              { number: '5+', label: 'Awards Won' },
+              { number: '5+', label: 'Years Experience' }
             ].map((stat, index) => (
               <div key={index} className="text-center bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:bg-gray-800/50 transition-all duration-300">
                 <div className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2 font-space-grotesk">

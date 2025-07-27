@@ -1,5 +1,5 @@
-import React from 'react';
 import { CheckCircle, Target, Heart, Star, Zap, Shield } from 'lucide-react';
+import ceo from '../assests/ceo1.jpeg'
 
 const About = () => {
   return (
@@ -18,7 +18,7 @@ const About = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              With over 15 years of innovation, we've redefined architectural excellence through 
+              With over 3 years of innovation, we've redefined architectural excellence through 
               cutting-edge technology and visionary design principles
             </p>
           </div>
@@ -27,13 +27,13 @@ const About = () => {
             <div className="space-y-8">
               <h3 className="text-3xl lg:text-4xl font-bold text-white font-space-grotesk">Our Vision</h3>
               <p className="text-lg text-gray-400 leading-relaxed">
-                Founded in 2008, Instyle Architect has evolved from a boutique design studio to a 
-                globally recognized architectural powerhouse. We specialize in creating spaces that 
+                Founded in 2022, Instyle Architect has evolved from a boutique design studio to a 
+                recognized architectural powerhouse. We specialize in creating spaces that 
                 seamlessly blend innovation, sustainability, and human-centered design.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { icon: CheckCircle, text: 'AI-Powered Design' },
+                  { icon: CheckCircle, text: 'Customized Solutions' },
                   { icon: Shield, text: 'Sustainable Solutions' },
                   { icon: Zap, text: 'Smart Integration' },
                   { icon: Target, text: 'Precision Engineering' }
@@ -61,14 +61,15 @@ const About = () => {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="text-center lg:text-left">
                 <div className="relative inline-block mb-6">
+                  {/* https://images.pexels.com/photos/1121796/pexels-photo-1121796.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop */}
                   <img
-                    src="https://images.pexels.com/photos/1121796/pexels-photo-1121796.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
-                    alt="Alex Chen - Founder & Principal Architect"
+                    src={ceo}
+                    alt="Imran Khan - Founder & Principal Architect"
                     className="w-48 h-48 lg:w-56 lg:h-56 rounded-full mx-auto lg:mx-0 object-cover shadow-2xl border-4 border-gray-700/50"
                   />
                   <div className="absolute inset-0 w-48 h-48 lg:w-56 lg:h-56 rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-400/20 mx-auto lg:mx-0 animate-pulse"></div>
                 </div>
-                <h4 className="text-2xl lg:text-3xl font-bold text-white mb-2 font-space-grotesk">Alex Chen</h4>
+                <h4 className="text-2xl lg:text-3xl font-bold text-white mb-2 font-space-grotesk">Imran Khan</h4>
                 <p className="text-cyan-400 font-semibold mb-4 text-lg">Founder & Principal Architect</p>
                 <div className="flex justify-center lg:justify-start gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (

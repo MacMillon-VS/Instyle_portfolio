@@ -1,4 +1,3 @@
-import React from 'react';
 import { Check, Star, Crown, Zap, Sparkles } from 'lucide-react';
 
 const Pricing = () => {
@@ -6,8 +5,8 @@ const Pricing = () => {
     {
       name: 'Essential',
       icon: Zap,
-      price: '$5,000',
-      period: 'per room',
+      price: '₹1799',
+      period: 'per aq ft',
       description: 'Perfect for modern renovations with smart features',
       features: [
         'AI-Assisted Design',
@@ -15,8 +14,8 @@ const Pricing = () => {
         'Project Management',
         'Quality Assurance',
         '6-Month Warranty',
-        'Basic Smart Integration',
-        'Energy Efficiency Analysis'
+        "RCC framed structure", 
+        " Basic materials", "RCC foundation & roof"
       ],
       popular: false,
       gradient: 'from-cyan-500 to-blue-500'
@@ -24,7 +23,7 @@ const Pricing = () => {
     {
       name: 'Professional',
       icon: Star,
-      price: '$12,000',
+      price: '₹2099',
       period: 'per room',
       description: 'Complete transformation with advanced technology',
       features: [
@@ -34,9 +33,8 @@ const Pricing = () => {
         'Quality Assurance',
         '2-Year Warranty',
         'Advanced Smart Home',
-        'Biophilic Design Elements',
-        '24/7 Priority Support',
-        'Performance Monitoring'
+        'Free Organic Terrace Gardening',
+        '24/7 Priority Support'
       ],
       popular: true,
       gradient: 'from-purple-500 to-pink-500'
@@ -44,7 +42,7 @@ const Pricing = () => {
     {
       name: 'Visionary',
       icon: Crown,
-      price: '$25,000',
+      price: '₹2299',
       period: 'per room',
       description: 'Ultimate luxury with cutting-edge innovation',
       features: [
@@ -55,10 +53,8 @@ const Pricing = () => {
         '5-Year Warranty',
         'Full Smart Ecosystem',
         'Adaptive Living Systems',
-        'Concierge Support',
         'Lifetime Maintenance',
-        'Future-Proof Technology',
-        'Carbon Neutral Guarantee'
+        'Future-Proof Technology'
       ],
       popular: false,
       gradient: 'from-orange-500 to-red-500'
@@ -92,7 +88,7 @@ const Pricing = () => {
               return (
                 <div
                   key={index}
-                  className={`relative group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border rounded-3xl p-8 lg:p-10 transition-all duration-500 hover:transform hover:-translate-y-2 ${
+                  className={`relative group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border rounded-3xl p-8 lg:p-10 transition-all duration-500 hover:transform hover:-translate-y-2 flex flex-col justify-around ${
                     plan.popular 
                       ? 'border-purple-500/50 shadow-2xl shadow-purple-500/10 scale-105' 
                       : 'border-gray-700/50 hover:border-gray-600/50 hover:shadow-2xl'
@@ -116,7 +112,7 @@ const Pricing = () => {
                       </span>
                       <span className="text-gray-500 ml-2 text-lg">{plan.period}</span>
                     </div>
-                  </div>
+                  
 
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
@@ -128,10 +124,12 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-
+                  </div>
+<div className='flex justify-between flex-col'>
                   <button className={`w-full py-4 rounded-2xl font-semibold text-white transition-all duration-300 bg-gradient-to-r ${plan.gradient} hover:shadow-lg hover:scale-105`}>
                     Get Started
                   </button>
+                </div>
                 </div>
               );
             })}

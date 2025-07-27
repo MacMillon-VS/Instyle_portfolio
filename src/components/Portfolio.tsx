@@ -19,7 +19,7 @@ const Portfolio = () => {
     ? projectsData 
     : projectsData.filter(project => project.category === activeCategory);
 
-  const openProjectDetail = (project) => {
+  const openProjectDetail = (project:any) => {
     setSelectedProject(project);
     document.body.style.overflow = 'hidden';
   };

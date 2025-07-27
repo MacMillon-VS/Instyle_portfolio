@@ -1,4 +1,3 @@
-import React from 'react';
 import { Compass, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
